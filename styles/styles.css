@@ -744,6 +744,176 @@ footer p {
 }
 
 
+/***************************************
+               DESKTOP
+***************************************/
+
+@media (min-width: 1100px) {
+
+  /* TYPOGRAPHY */
+
+  h1 {
+    font-size: 3.815rem;
+  }
+
+  h2 {
+    font-size: 3.052rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+
+  /* HEADER */
+
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .container-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    gap: 2rem;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .container-hero {
+    max-width: 750px;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    max-width: 700px;
+  }
+
+  .hero p {
+    max-width: 550px;
+  }
+
+
+  /* WELCOME SECTION */
+
+  .welcome {
+    padding: 6rem 0;
+  }
+
+  .welcome h2 {
+    max-width: 650px;
+  }
+
+  .coffee-gallery {
+    gap: 1rem;
+  }
+
+
+  /* VALUES SECTION */
+
+  .values {
+    padding: 4rem 0 6rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* All three values stay on the same row */
+  .value-item:last-child {
+    grid-column: auto;
+    max-width: 350px;
+  }
+
+  .value-item {
+    max-width: 350px;
+  }
+
+  .value-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+
+  /* EXPLORE SECTION */
+
+  .explore-item {
+    min-height: 400px;
+    padding: 4rem 2rem;
+  }
+
+  .explore-item h2 {
+    max-width: 450px;
+  }
+
+
+  /* ABOUT US SECTION */
+
+  .about {
+    padding: 7rem 0;
+  }
+
+  .container-about {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    margin-bottom: 1rem;
+  }
+
+  .about-content p {
+    margin-bottom: 1rem;
+  }
+
+
+  /* TESTIMONIALS SECTION */
+
+  .testimonials {
+    padding: 6rem 0;
+  }
+
+  .testimonials h2 {
+    max-width: 650px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .testimonial {
+    min-height: 400px;
+    padding: 1.5rem;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding-bottom: 2rem;
+  }
+
+}
+
+
+
+
 
 
 
