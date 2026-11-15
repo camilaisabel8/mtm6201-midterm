@@ -4,48 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Coffee House</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
-<body>
-  <header>
-    <!-- Logo, navigation-->
-     <nav>
 
-     </nav>
+<body>
+  <!-- Skip link for keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <!-- Logo, navigation -->
+    <div class="container-header">
+      <a href="#" class="logo-link" aria-label="My Coffee House - Home">
+        <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House logo" class="logo">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+    <!-- Added classes and containers to make my css styles more organized and easier to manage -->
 
   <main id="main-content">
 
     <section class="hero">
       <!-- Hero content -->
+      <div class="container-hero">
+        <h1>Experience coffee like never before</h1>
+
+        <p>
+          We craft more than beverages; we curate memories, one flavorful
+          moment at a time. Embrace the aroma and let every visit be a
+          chapter in your coffee story.
+        </p>
+
+        <a href="#menu" class="button-primary">Explore our menu</a>
+      </div>
     </section>
+
+ <!-- FIRST section ends here -->
+
+
+
 
     <section class="welcome">
       <!-- Welcome content, images -->
+      <div class="container-welcome">
+
+        <div class="section-heading">
+          <p class="top-p">Welcome to My Coffee House</p>
+          <h2>Experience a new way to taste coffee</h2>
+        </div>
+
+        <!-- Image gallery layout will change with CSS Grid -->
+        <div class="coffee-gallery">
+          <img src="images/latte.jpeg"
+               alt="Freshly prepared latte art in a coffee cup"
+               class="gallery-main">
+
+          <img src="images/coffee-beans.jpeg"
+               alt="Coffee beans"
+               class="gallery-image">
+
+          <img src="images/pouring-coffee.jpeg"
+               alt="Coffee being poured"
+               class="gallery-image">
+
+          <img src="images/three-cups.jpeg"
+               alt="Three cups of coffee"
+               class="gallery-image">
+
+          <img src="images/smiling-employee.jpeg"
+               alt="Smiling coffee shop employee"
+               class="gallery-image">
+        </div>
+
+      </div>
     </section>
+
+<!-- SECOND section ends here -->
+
+
+
 
     <section class="values">
       <!-- What we offer, images (icon style) -->
+      <div class="container-values">
+
+        <div class="section-heading">
+          <p class="top-p">What we Offer</p>
+          <h2>Why visit us?</h2>
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-item">
+            <img src="images/fair-trade.svg" alt="Fair trade icon"
+                 class="value-icon">
+
+            <h3>Fair Trade Coffee</h3>
+
+            <p>
+              We build direct relationships with the farmers and producers
+              who help in the development of delicious, sustainable and
+              organic coffee.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <img src="images/local-baked-goods.svg" alt="Local baked goods icon"
+                 class="value-icon">
+
+            <h3>Local baked goods</h3>
+
+            <p>
+              We use local products to bake our goods and bring in a variety
+              of treats from local bakers with our community.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <img src="images/made-with-love.svg" alt="Made with love icon"
+                 class="value-icon">
+
+            <h3>Made with love</h3>
+
+            <p>
+              We value our customers and make it our priority to serve
+              everyone with respect and a friendly smile to start their
+              day of right.
+            </p>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <section class="explore">
-      <!-- Menu link, location link-->
-    </section>
+<!-- THIRD section ends here -->
 
-    <section class="about">
-      <!-- Story, learn more button -->
-    </section>
-
-    <section class="testimonials">
-      <!-- Testimonials with names and images-->
-    </section>
 
   </main>
+ 
 
   <footer>
     <!-- Footer copyright -->
+    <div class="container-footer">
+      <p>&copy; My Coffee Company 2024</p>
+    </div>
   </footer>
 
+<!-- SEVENTH section ends here -->
 </body>
+
 </html>
