@@ -207,9 +207,16 @@ p {
 
 .hero {
   /* Overlay to make the text easier to read */
+  /* AI USE: Prompt: Best ways to lower the contrast in an image 
+     or a website hero. 
+    It gave me linear gradient as the top option. I asked an 
+    explanation for the numbers (basically the last one controls 
+    opacity and we applied it twice for a more uniform effect. 
+    The other option is background-blend-mode: darken; (I used this 
+    one later on in the explore section so I could try both) */
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('../images/hero-background.jpg');
+  linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+  url('../images/hero-background.jpg');
 
   background-size: cover;
   background-position: center;
@@ -414,3 +421,147 @@ matches the mockup */
 }
 
 /*********** FOURTH section ends here ***********/
+
+
+
+/* ABOUT US SECTION */
+
+.about {
+  padding: 4rem 0;
+}
+
+.about-image {
+  margin-bottom: 2rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-content .top-p {
+  margin-bottom: 0.5rem;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+.about-content .button-primary {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.about-content .button-primary:hover,
+.about-content .button-primary:focus-visible {
+  background-color: #d69e3d;
+  color: #000000;
+}
+
+.about-content .button-primary:active {
+  background-color: #966f2c;
+  color: #ffffff;
+}
+
+/*********** FIFTH section ends here ***********/
+
+
+
+
+/* TESTIMONIALS SECTION */
+
+.testimonials {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.testimonials .section-heading {
+  margin-bottom: 2rem;
+}
+
+.testimonials .top-p {
+  margin-bottom: 0.5rem;
+}
+
+.testimonials h2 {
+  margin-bottom: 1rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Same styles for all three testimonials */
+.testimonial {
+  min-height: 400px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Different background for each testimonial */
+.testimonial:nth-child(1) {
+  background-image: url('../images/testimonial-1.jpeg');
+}
+
+.testimonial:nth-child(2) {
+  background-image: url('../images/testimonial-2.jpeg');
+}
+
+.testimonial:nth-child(3) {
+  background-image: url('../images/testimonial-3.jpeg');
+}
+
+.testimonial blockquote {
+  margin-bottom: 1rem;
+}
+
+.testimonial p {
+  line-height: 1.5;
+}
+
+.customer-name {
+  color: #d69e3d;
+  text-transform: uppercase;
+}
+
+/*********** SIXTH section ends here ***********/
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 0 2rem;
+}
+
+.container-footer {
+  border-top: 1px solid #ffffff;
+
+  padding-top: 1.5rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/*********** SEVENTH section ends here ***********/
+
