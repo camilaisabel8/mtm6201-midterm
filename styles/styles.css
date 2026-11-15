@@ -565,3 +565,186 @@ footer p {
 
 /*********** SEVENTH section ends here ***********/
 
+
+
+
+/***************************************
+                TABLET
+***************************************/
+
+@media (min-width: 768px) {
+
+  /* TYPOGRAPHY */
+
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+
+  /* HEADER */
+
+  .site-header {
+    padding: 1.5rem 0;
+  }
+
+  .container-header {
+    gap: 1rem;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 450px;
+  }
+
+  .container-hero {
+    max-width: 700px;
+  }
+
+  .hero h1 {
+    max-width: 650px;
+    margin: 0 auto 1rem;
+  }
+
+  .hero p {
+    max-width: 550px;
+    margin: 0 auto 2rem;
+  }
+
+
+  /* WELCOME SECTION */
+
+  .welcome {
+    padding: 5rem 0;
+  }
+
+  .welcome h2 {
+    max-width: 550px;
+  }
+
+  /* Gallery changes from 2 to 4 columns */
+  .coffee-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-main {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-image {
+    aspect-ratio: 1 / 1;
+  }
+
+
+  /* VALUES SECTION */
+
+  .values {
+    padding: 4rem 0 6rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+    justify-items: center;
+  }
+
+  /* Last value centered below the first two */
+  .value-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 450px;
+  }
+
+
+  /* EXPLORE SECTION */
+
+  .container-explore {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .explore-item {
+    width: 50%;
+    min-height: 350px;
+    padding: 3rem 1rem;
+  }
+
+  .explore-item h2 {
+    max-width: 350px;
+  }
+
+
+  /* ABOUT US SECTION */
+
+  .about {
+    padding: 5rem 0;
+  }
+
+  .container-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .about-image {
+    margin-bottom: 0;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  /* TESTIMONIALS SECTION */
+
+  .testimonials {
+    padding: 5rem 0;
+  }
+
+  .testimonials h2 {
+    max-width: 650px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .testimonial {
+    min-height: 450px;
+    padding: 1rem;
+  }
+
+  .testimonial p {
+    font-size: 0.875rem;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding-bottom: 2rem;
+  }
+
+}
+
+
+
+
+
+
