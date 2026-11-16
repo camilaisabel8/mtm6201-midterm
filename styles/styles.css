@@ -68,848 +68,1306 @@ a {
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@400;700;900&display=swap');
 
 
+
 /***************************************
+
               MAIN STYLES
+
 ***************************************/
+
 
 /* TYPOGRAPHY */
 
+/* I start with the general styles of the page. Karla is used for the
+body text, line-height gives the paragraphs more space between lines,
+and the background uses the cream colour from the mockup. */
+
+/* I googled ways to give space between text in css and chose line-height */
+
 body {
-  font-family: 'Karla', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #000000;
-  background-color: #f3f0e9;
+
+font-family: 'Karla', sans-serif;
+
+font-size: 1rem;
+
+line-height: 1.5;
+
+color: #000000;
+
+background-color: #f3f0e9;
+
 }
 
-/* Headings and navigation use Lato */
+/* I grouped the headings and nav because they all use Lato.
+This way I don't have to repeat the same font-family for each one. */
+
 h1, h2, h3, nav {
-  font-family: 'Lato', sans-serif;
+
+font-family: 'Lato', sans-serif;
+
 }
+
+/* The heading sizes come from the mobile type scale in the instructions.
+I also used uppercase to match the headings in the mockups. */
 
 h1 {
-  font-size: 2.027rem;
-  font-weight: 900;
-  line-height: 1.1;
-  text-transform: uppercase;
+
+font-size: 2.027rem;
+
+font-weight: 900;
+
+line-height: 1.1;
+
+text-transform: uppercase;
+
 }
 
 h2 {
-  font-size: 1.802rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
+
+font-size: 1.802rem;
+
+font-weight: 700;
+
+line-height: 1.2;
+
+text-transform: uppercase;
+
 }
 
 h3 {
-  font-size: 1.424rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
+
+font-size: 1.424rem;
+
+font-weight: 700;
+
+line-height: 1.2;
+
+text-transform: uppercase;
+
 }
 
 p {
-  font-size: 1rem;
+
+font-size: 1rem;
+
 }
 
-/* Buttons use Karla */
+/* Both button classes share the same font and uppercase text.
+I can style their colours separately without repeating the typography. */
+
 .button-primary,
+
 .button-secondary {
-  font-family: 'Karla', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
+
+font-family: 'Karla', sans-serif;
+
+font-size: 1rem;
+
+font-weight: 700;
+
+text-transform: uppercase;
+
+text-align: center;
+
 }
 
-/* Small gold text above section headings */
+/* This class is for the smaller text above the section titles.
+Using one class keeps the same gold colour throughout the page. */
+
 .top-p {
-  color: #d69e3d;
-  text-transform: uppercase;
+
+color: #d69e3d;
+
+text-transform: uppercase;
+
 }
 
-/* Keep the content inside the maximum width */
+/* Here I grouped the containers for all the sections. max-width stops
+my content from stretching past 1200px, margin: 0 auto centers it,
+and the side padding keeps the text away from the screen edges. */
+
 .container-header,
+
 .container-hero,
+
 .container-welcome,
+
 .container-values,
+
 .container-explore,
+
 .container-about,
+
 .container-testimonials,
+
 .container-footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+
+width: 100%;
+
+max-width: 1200px;
+
+margin: 0 auto;
+
+padding: 0 1rem;
+
 }
 
 /* Accessibility: skip navigation */
+
+/* The skip link is outside the screen at first because of top: -100px.
+When someone uses Tab, :focus moves it down so they can skip the nav
+and go straight to the main content. */
+
 .skip-link {
-  position: absolute;
-  top: -100px;
-  left: 1rem;
-  padding: 0.75rem 1rem;
-  background-color: #ffffff;
-  color: #000000;
-  z-index: 100;
+
+position: absolute;
+
+top: -100px;
+
+background-color: #ffffff;
+
+color: #000000;
+
 }
 
 .skip-link:focus {
-  top: 1rem;
+
+top: 1rem;
+
 }
 
-
 /***************************************
+
                 MOBILE
+
 ***************************************/
 
 /* HEADER */
 
+/* I used flex-direction: column in the header because on mobile the
+logo is above the navigation. align-items centers both elements,
+and gap adds space between them. */
 .site-header {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 1rem 0;
+
+background-color: #000000;
+
+color: #ffffff;
+
+padding: 1rem 0;
+
 }
 
 .container-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+gap: 1.5rem;
+
 }
 
 .logo {
-  width: 170px;
-  height: auto;
+
+width: 170px;
+
+height: auto;
+
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
 
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 2rem;
+
+}
+/* I added hover and focus-visible (for accesibility) so the navigation 
+links change to gold when using the mouse or keyboard. The transition 
+makes the color change smoother. */
 .nav-list a {
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+
+font-size: 0.875rem;
+
+font-weight: 700;
+
+text-transform: uppercase;
+
+transition: color 0.3s;
+
 }
 
 .nav-list a:hover,
-.nav-list a:focus-visible {
-  color: #d69e3d;
-}
 
+.nav-list a:focus-visible {
+
+color: #d69e3d;
+
+}
 
 /* HERO */
 
+/* I used the coffee photo as a background so the heading and button
+can sit on top of it. background-size: cover fills the space, and flex
+with align-items: center puts the content in the middle vertically. */
 .hero {
+
   /* Overlay to make the text easier to read */
-  /* AI USE: Prompt: Best ways to lower the contrast in an image 
-     or a website hero. 
+
+  /* AI USE: Prompt: Best ways to lower the contrast in an image or a website hero. 
     It gave me linear gradient as the top option. I asked an 
     explanation for the numbers (basically the last one controls 
     opacity and we applied it twice for a more uniform effect. 
     The other option is background-blend-mode: darken; (I used this 
     one later on in the explore section so I could try both) */
-  background-image:
+
+background-image:
+
   linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+
   url('../images/hero-background.jpg');
 
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+background-size: cover;
 
-  min-height: 350px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+background-position: center;
+
+color: #ffffff;
+
+min-height: 350px;
+
+display: flex;
+
+align-items: center;
+
+text-align: center;
+
 }
 
 .container-hero {
-  padding: 3rem 1rem;
+
+padding: 3rem 1rem;
+
 }
 
 .hero h1 {
-  margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
 }
 
 .hero p {
-  margin-bottom: 2rem;
+
+margin-bottom: 2rem;
+
 }
 
-/* Primary button */
+/* I gave the main links a button style with padding so they have more
+space around the text. The transition makes the colour change smoother
+when someone hovers or uses the keyboard to focus on a button. */
+
 .button-primary {
-  display: inline-block;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 0.9rem 1.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+display: inline-block;
+
+background-color: #ffffff;
+
+color: #000000;
+
+padding: 0.9rem 1.5rem;
+
+transition: background-color 0.3s, color 0.3s;
+
 }
 
 .button-primary:hover,
+
 .button-primary:focus-visible {
-  background-color: #d69e3d;
-  color: #000000;
+
+background-color: #d69e3d;
+
+color: #000000;
+
 }
 
 .button-primary:active {
-  background-color: #966f2c;
-  color: #ffffff;
+
+background-color: #966f2c;
+
+color: #ffffff;
+
 }
 
-
 /*********** FIRST section ends here ***********/
-
 
 /* WELCOME SECTION */
 
 .welcome {
-  padding: 4rem 0;
+
+padding: 4rem 0;
+
 }
 
 .welcome .section-heading {
-  margin-bottom: 1.5rem;
+
+margin-bottom: 1.5rem;
+
 }
 
 .welcome .top-p {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .welcome h2 {
-  max-width: 350px;
-  margin-bottom: 1rem;
+
+max-width: 350px;
+
+margin-bottom: 1rem;
+
 }
 
-/* Coffee gallery using Grid */
+/* I used Grid to divide the coffee gallery into two equal columns.
+The gap adds space between the photos, and the images use cover 
+(I googled this cover way: how to fit images on css without looking
+streched easily)so they fill their spaces without looking stretched. */
+
 .coffee-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 1rem;
+
 }
 
 .coffee-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+width: 100%;
+
+height: 100%;
+
+object-fit: cover;
+
 }
 
-/* First image takes both columns */
+/* grid-column: 1 / -1 makes the first photo stretch across both
+columns on mobile. The four smaller photos then fit in pairs below it. */
+
 .gallery-main {
-  grid-column: 1 / -1;
-  aspect-ratio: 1 / 1;
+
+grid-column: 1 / -1;
+
+aspect-ratio: 1 / 1;
+
 }
 
 .gallery-image {
-  aspect-ratio: 1 / 1;
+
+aspect-ratio: 1 / 1;
+
 }
 
 /*********** SECOND section ends here ***********/
 
 
-
 /* VALUES SECTION */
 
+/* On mobile I used flex-direction: column to stack the three reasons
+to visit one below another. align-items centers the icons and text,
+while gap creates space between each reason. */
 .values {
-  padding: 3rem 0 5rem;
-  text-align: center;
+
+padding: 3rem 0 5rem;
+
+text-align: center;
+
 }
 
 .values .section-heading {
-  margin-bottom: 3rem;
+
+margin-bottom: 3rem;
+
 }
 
 .values .top-p {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .values-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+gap: 4rem;
+
 }
 
 .value-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 350px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+max-width: 350px;
+
 }
 
 .value-icon {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+
+width: 150px;
+
+height: 150px;
+
+object-fit: contain;
+
+margin-bottom: 1rem;
+
 }
 
 .value-item h3 {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .value-item p {
-  line-height: 1.5;
+
+line-height: 1.5;
+
 }
 
 /*********** THIRD section ends here ***********/
 
 
-
 /* EXPLORE SECTION */
 
+/* The explore section has one background image behind both links.
+I used background-blend-mode: darken with a semi-transparent black
+colour so the white text is easier to read on the photo, I found this
+technique useful to make the design more appealing and professional. */
 .explore {
-  background-image: url('../images/coffee-shop.jpeg');
-  background-color: rgba(0, 0, 0, 0.55);
-  background-blend-mode: darken;
 
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
+background-image: url('../images/coffee-shop.jpeg');
+
+background-color: rgba(0, 0, 0, 0.55);
+
+background-blend-mode: darken;
+
+background-size: cover;
+
+background-position: center;
+
+color: white;
+
+text-align: center;
+
 }
-/* Added a darken color overlay so the text is more visible 
-matches the mockup */
 
 .container-explore {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
+
+display: flex;
+
+flex-direction: column;
+
+padding: 0 1rem;
+
 }
 
 .explore-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 240px;
-  padding: 2rem 0;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+min-height: 240px;
+
+padding: 2rem 0;
+
 }
 
 .explore-item .top-p {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .explore-item h2 {
-  margin-bottom: 2rem;
-  max-width: 350px;
+
+margin-bottom: 2rem;
+
+max-width: 350px;
+
 }
 
-/* Secondary outlined button */
-.button-secondary {
-  display: inline-block;
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 0.9rem 1.5rem;
+/* This button has a transparent background and a white border so it
+looks different from the main filled button. On hover the colours
+switch, and on active I use the darker gold from the instructions. */
 
-  transition: background-color 0.3s ease, color 0.3s ease;
+.button-secondary {
+
+display: inline-block;
+
+background-color: transparent;
+
+color: #ffffff;
+
+border: 2px solid #ffffff;
+
+padding: 0.9rem 1.5rem;
+
+transition: background-color 0.3s, color 0.3s;
+
 }
 
 .button-secondary:hover,
+
 .button-secondary:focus-visible {
-  background-color: #ffffff;
-  color: #000000;
+
+background-color: #ffffff;
+
+color: #000000;
+
 }
 
 .button-secondary:active {
-  background-color: #966f2c;
-  border-color: #966f2c;
-  color: #ffffff;
+
+background-color: #966f2c;
+
+border-color: #966f2c;
+
+color: #ffffff;
+
 }
 
 /*********** FOURTH section ends here ***********/
 
-
-
 /* ABOUT US SECTION */
 
+/* I kept the About image above the story for mobile. Since the
+HTML already puts the image first, I only need to add spacing here;
+later I use Grid to place the image and text side by side. */
 .about {
-  padding: 4rem 0;
+
+padding: 4rem 0;
+
 }
 
 .about-image {
-  margin-bottom: 2rem;
+
+margin-bottom: 2rem;
+
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+
+width: 100%;
+
+height: auto;
+
+display: block;
+
 }
 
 .about-content .top-p {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .about-content h2 {
-  margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
 }
 
 .about-content p {
-  margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
 }
 
 .about-content .button-primary {
-  background-color: #000000;
-  color: #ffffff;
-  margin-top: 1rem;
+
+background-color: #000000;
+
+color: #ffffff;
+
+margin-top: 1rem;
+
 }
 
 .about-content .button-primary:hover,
+
 .about-content .button-primary:focus-visible {
-  background-color: #d69e3d;
-  color: #000000;
+
+background-color: #d69e3d;
+
+color: #000000;
+
 }
 
 .about-content .button-primary:active {
-  background-color: #966f2c;
-  color: #ffffff;
+
+background-color: #966f2c;
+
+color: #ffffff;
+
 }
 
 /*********** FIFTH section ends here ***********/
 
-
-
-
 /* TESTIMONIALS SECTION */
 
 .testimonials {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 4rem 0;
+
+background-color: #000000;
+
+color: #ffffff;
+
+padding: 4rem 0;
+
 }
 
 .testimonials .section-heading {
-  margin-bottom: 2rem;
+
+margin-bottom: 2rem;
+
 }
 
 .testimonials .top-p {
-  margin-bottom: 0.5rem;
+
+margin-bottom: 0.5rem;
+
 }
 
 .testimonials h2 {
-  margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+
+display: grid;
+
+grid-template-columns: 1fr;
+
+gap: 1rem;
+
 }
 
-/* Same styles for all three testimonials */
+/* Each testimonial uses flex-direction: column. I used
+justify-content: flex-end so the quote and the name stay near the
+bottom of the photo instead of starting at the top. */
+
 .testimonial {
-  min-height: 400px;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-  background-size: cover;
-  background-position: center;
+min-height: 400px;
+
+padding: 2rem 1.5rem;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: flex-end;
+
+background-color: rgba(0, 0, 0, 0.5);
+
+background-blend-mode: darken;
+
+background-size: cover;
+
+background-position: center;
+
 }
 
-/* Different background for each testimonial */
+/* All testimonials have the same class and styles. I used nth-child
+to give each one a different photo based on its order in the HTML,
+without needing three extra classes. */
+
 .testimonial:nth-child(1) {
-  background-image: url('../images/testimonial-1.jpeg');
+
+background-image: url('../images/testimonial-1.jpeg');
+
 }
 
 .testimonial:nth-child(2) {
-  background-image: url('../images/testimonial-2.jpeg');
+
+background-image: url('../images/testimonial-2.jpeg');
+
 }
 
 .testimonial:nth-child(3) {
-  background-image: url('../images/testimonial-3.jpeg');
+
+background-image: url('../images/testimonial-3.jpeg');
+
 }
 
 .testimonial blockquote {
-  margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
 }
 
 .testimonial p {
-  line-height: 1.5;
+
+line-height: 1.5;
+
 }
 
 .customer-name {
-  color: #d69e3d;
-  text-transform: uppercase;
+
+color: #d69e3d;
+
+text-transform: uppercase;
+
 }
 
 /*********** SIXTH section ends here ***********/
 
-
-
 /* FOOTER */
 
 footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 0 0 2rem;
+
+background-color: #000000;
+
+color: #ffffff;
+
+text-align: center;
+
+padding: 0 0 2rem;
+
 }
 
 .container-footer {
-  border-top: 1px solid #ffffff;
 
-  padding-top: 1.5rem;
+border-top: 1px solid #ffffff;
+
+padding-top: 1.5rem;
+
 }
 
 footer p {
-  font-size: 1rem;
+
+font-size: 1rem;
+
 }
 
 /*********** SEVENTH section ends here ***********/
 
-
-
-
 /***************************************
+
                 TABLET
+
 ***************************************/
 
+/* I used min-width so the mobile styles still apply first, and I only
+change the layouts and text sizes that need more space on tablets. */
 @media (min-width: 768px) {
 
   /* TYPOGRAPHY */
 
   h1 {
-    font-size: 2.986rem;
+
+font-size: 2.986rem;
+
   }
 
   h2 {
-    font-size: 2.488rem;
+
+font-size: 2.488rem;
+
   }
 
   h3 {
-    font-size: 1.728rem;
-  }
 
+font-size: 1.728rem;
+
+  }
 
   /* HEADER */
 
   .site-header {
-    padding: 1.5rem 0;
+
+padding: 1.5rem 0;
+
   }
 
   .container-header {
-    gap: 1rem;
-  }
 
+gap: 1rem;
+
+  }
 
   /* HERO */
 
   .hero {
-    min-height: 450px;
+
+min-height: 450px;
+
   }
 
   .container-hero {
-    max-width: 700px;
+
+max-width: 700px;
+
   }
 
   .hero h1 {
-    max-width: 650px;
-    margin: 0 auto 1rem;
+
+max-width: 650px;
+
+margin: 0 auto 1rem;
+
   }
 
   .hero p {
-    max-width: 550px;
-    margin: 0 auto 2rem;
-  }
 
+max-width: 550px;
+
+margin: 0 auto 2rem;
+
+  }
 
   /* WELCOME SECTION */
 
   .welcome {
-    padding: 5rem 0;
+
+padding: 5rem 0;
+
   }
 
   .welcome h2 {
-    max-width: 550px;
+
+max-width: 550px;
+
   }
 
-  /* Gallery changes from 2 to 4 columns */
+  /* At 768px the gallery changes to four columns. The main photo takes
+two columns and two rows, leaving the smaller pictures beside it. */
+
   .coffee-gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 1rem;
+
   }
 
+  /* I used aspect-ratio: 1/1 to keep the gallery images square.
+The main image spans two rows and columns, making it bigger
+than the other four images. */
   .gallery-main {
-    grid-column: span 2;
-    grid-row: span 2;
-    aspect-ratio: 1 / 1;
+
+grid-column: span 2;
+
+grid-row: span 2;
+
+aspect-ratio: 1 / 1;
+
   }
 
   .gallery-image {
-    aspect-ratio: 1 / 1;
-  }
 
+aspect-ratio: 1 / 1;
+
+  }
 
   /* VALUES SECTION */
 
   .values {
-    padding: 4rem 0 6rem;
+
+padding: 4rem 0 6rem;
+
   }
 
   .values-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem 2rem;
-    justify-items: center;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 4rem 2rem;
+
+justify-items: center;
+
   }
 
-  /* Last value centered below the first two */
+  /* The values section has two columns on tablet. I make the last item
+span both columns to center it below the first two. */
+
   .value-item:last-child {
-    grid-column: 1 / -1;
-    max-width: 450px;
-  }
 
+grid-column: 1 / -1;
+
+max-width: 450px;
+
+  }
 
   /* EXPLORE SECTION */
 
+  /* I change the Explore container from column to row so Menu and
+  Locations share the width instead of stacking on top of each other. */
   .container-explore {
-    flex-direction: row;
-    align-items: stretch;
+
+flex-direction: row;
+
+align-items: stretch;
+
   }
 
   .explore-item {
-    width: 50%;
-    min-height: 350px;
-    padding: 3rem 1rem;
+
+width: 50%;
+
+min-height: 350px;
+
+padding: 3rem 1rem;
+
   }
 
   .explore-item h2 {
-    max-width: 350px;
-  }
 
+max-width: 350px;
+
+  }
 
   /* ABOUT US SECTION */
 
   .about {
-    padding: 5rem 0;
+
+padding: 5rem 0;
+
   }
 
+  /* I use two equal Grid columns for About so the image is on the
+  left and the story is on the right when there is enough space. */
   .container-about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    align-items: center;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 1.5rem;
+
+align-items: center;
+
   }
 
   .about-image {
-    margin-bottom: 0;
+
+margin-bottom: 0;
+
   }
 
   .about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
+width: 100%;
+
+height: 100%;
+
+object-fit: cover;
+
+  }
 
   /* TESTIMONIALS SECTION */
 
   .testimonials {
-    padding: 5rem 0;
+
+padding: 5rem 0;
+
   }
 
   .testimonials h2 {
-    max-width: 650px;
+
+max-width: 650px;
+
   }
 
+  /* The three testimonial cards now fit side by side. Each one takes
+  one equal column and keeps its own background photo. */
   .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 1rem;
+
   }
 
   .testimonial {
-    min-height: 450px;
-    padding: 1rem;
+
+min-height: 450px;
+
+padding: 1rem;
+
   }
 
   .testimonial p {
-    font-size: 0.875rem;
-  }
 
+font-size: 0.875rem;
 
-  /* FOOTER */
-
-  footer {
-    padding-bottom: 2rem;
   }
 
 }
 
-
 /***************************************
+
                DESKTOP
+
 ***************************************/
 
+/* At 1100px I use the desktop font sizes from the rubric and give
+some sections more space. The layout still builds on the mobile and
+tablet rules above instead of starting again. */
 @media (min-width: 1100px) {
 
   /* TYPOGRAPHY */
 
   h1 {
-    font-size: 3.815rem;
+
+font-size: 3.815rem;
+
   }
 
   h2 {
-    font-size: 3.052rem;
+
+font-size: 3.052rem;
+
   }
 
   h3 {
-    font-size: 1.953rem;
-  }
 
+font-size: 1.953rem;
+
+  }
 
   /* HEADER */
 
   .site-header {
-    padding: 1rem 0;
+
+padding: 1rem 0;
+
   }
 
+  /* On desktop I put the logo and nav on the same line.
+  space-between pushes them to opposite sides of the container. */
   .container-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+flex-direction: row;
+
+justify-content: space-between;
+
+align-items: center;
+
   }
 
   .nav-list {
-    gap: 2rem;
-  }
 
+gap: 2rem;
+
+  }
 
   /* HERO */
 
   .hero {
-    min-height: 500px;
+
+min-height: 500px;
+
   }
 
   .container-hero {
-    max-width: 750px;
-    padding: 4rem 1rem;
+
+max-width: 750px;
+
+padding: 4rem 1rem;
+
   }
 
   .hero h1 {
-    max-width: 700px;
+
+max-width: 700px;
+
   }
 
   .hero p {
-    max-width: 550px;
-  }
 
+max-width: 550px;
+
+  }
 
   /* WELCOME SECTION */
 
   .welcome {
-    padding: 6rem 0;
+
+padding: 6rem 0;
+
   }
 
   .welcome h2 {
-    max-width: 650px;
+
+max-width: 650px;
+
   }
 
   .coffee-gallery {
-    gap: 1rem;
-  }
 
+gap: 1rem;
+
+  }
 
   /* VALUES SECTION */
 
   .values {
-    padding: 4rem 0 6rem;
+
+padding: 4rem 0 6rem;
+
   }
 
   .values-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 2rem;
+
+align-items: start;
+
   }
 
-  /* All three values stay on the same row */
+  /* I changed the Grid to three columns on desktop. I also reset the
+last item to auto so it no longer takes the full row like on tablet. */
+
   .value-item:last-child {
-    grid-column: auto;
-    max-width: 350px;
+
+grid-column: auto;
+
+max-width: 350px;
+
   }
 
   .value-item {
-    max-width: 350px;
+
+max-width: 350px;
+
   }
 
   .value-icon {
-    width: 150px;
-    height: 150px;
-  }
 
+width: 150px;
+
+height: 150px;
+
+  }
 
   /* EXPLORE SECTION */
 
   .explore-item {
-    min-height: 400px;
-    padding: 4rem 2rem;
+
+min-height: 400px;
+
+padding: 4rem 2rem;
+
   }
 
   .explore-item h2 {
-    max-width: 450px;
-  }
 
+max-width: 450px;
+
+  }
 
   /* ABOUT US SECTION */
 
   .about {
-    padding: 7rem 0;
+
+padding: 7rem 0;
+
   }
 
   .container-about {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 2rem;
+
+align-items: center;
+
   }
 
   .about-content h2 {
-    margin-bottom: 1rem;
+
+margin-bottom: 1rem;
+
   }
 
   .about-content p {
-    margin-bottom: 1rem;
-  }
 
+margin-bottom: 1rem;
+
+  }
 
   /* TESTIMONIALS SECTION */
 
   .testimonials {
-    padding: 6rem 0;
+
+padding: 6rem 0;
+
   }
 
   .testimonials h2 {
-    max-width: 650px;
+
+max-width: 650px;
+
   }
 
   .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 1rem;
+
   }
 
   .testimonial {
-    min-height: 400px;
-    padding: 1.5rem;
+
+min-height: 400px;
+
+padding: 1.5rem;
+
   }
 
   .testimonial p {
-    font-size: 1rem;
+
+font-size: 1rem;
+
   }
 
-
+}
   /* FOOTER */
 
   footer {
     padding-bottom: 2rem;
   }
 
-}
+
 
 
 
