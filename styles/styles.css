@@ -924,6 +924,7 @@ gap: 1rem;
   .hero {
 
 min-height: 450px;
+background-position: center 40%;
 
   }
 
@@ -1190,15 +1191,18 @@ gap: 2rem;
   /* HERO */
 
   .hero {
-
+/* I added background-position: center because the image was not centered 
+in the desktop view, I tried to fix it with this. I added this for the 
+tablet version as well. */
 min-height: 500px;
+background-position: center 40%;
+}
 
   }
 
   .container-hero {
 
 max-width: 750px;
-
 padding: 4rem 1rem;
 
   }
